@@ -19,7 +19,7 @@ __pycache__/
 # Ignore large files
 *.pdf
 *.jpg
-*.png
+# *.png
 
 # Ignore IDE-specific files
 .vscode/
