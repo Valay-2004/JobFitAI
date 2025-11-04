@@ -1,4 +1,3 @@
-# pylint: disable=all
 import io
 import os
 import re
@@ -24,7 +23,12 @@ from nltk.stem import WordNetLemmatizer
 
 # Load environment variables
 load_dotenv()
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+if not GOOGLE_API_KEY:
+    st.error("Google API Key not found. Please check your .env file.")
+    st.stop()
+
+genai.configure(api_key=GOOGLE_API_KEY)
 
 # ------------------------------
 # 🔹 Gemini API Call Optimization
@@ -32,7 +36,7 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 @st.cache_resource
 def get_gemini_response(input_text, resume_text):
     """Send a single request to Gemini AI for all tasks."""
-    model = genai.GenerativeModel("gemini-2.0-flash")
+    model = genai.GenerativeModel("gemini-2.5-flash")
     
     prompts = {
         "resume_review": """
