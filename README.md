@@ -2,7 +2,7 @@
 
 An AI-powered resume analyzer that helps match your resume with job descriptions.
 
-![JobFitAI Main Interface](./images/main.png)
+![JobFitAI Main Interface](./images/dashboard.png)
 
 ## ✨ Features
 
@@ -15,8 +15,8 @@ An AI-powered resume analyzer that helps match your resume with job descriptions
 ## 🖼️ Screenshots
 
 <div align="center">
-  <img src="./images/dashboard.png" width="400" alt="Dashboard"/>
   <img src="./images/match.png" width="400" alt="Match Score"/>
+  <img src="./images/improvement_suggestions.png" width="400" alt="Improvement Suggestions"/>
 </div>
 
 <div align="center">
